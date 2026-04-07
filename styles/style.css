@@ -1,1 +1,406 @@
 /* место для вашего кода */
+
+/* 
+ Общие классы (полупрозрачные обертки, базовые стили адресов, 
+*/
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #000000;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.address {
+  font-style: normal;
+}
+
+
+
+.header {
+  padding: 95px 50px 100px;
+}
+
+
+.cover {
+  position: relative;
+  padding: 165px 50px;
+  background-image: url('../images/cover.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+
+.lots {
+  padding: 180px 24px 0;
+}
+
+
+/*
+   ШАПКА
+    */
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+/* 
+ Меню
+*/
+
+.header__menu {
+  font-size: 18px;
+}
+
+.header__links-list {
+  display: flex;
+  gap: 30px;
+  list-style: circle;
+}
+
+/* У первого пункта убираем кружочек,
+   потому что перед ним нет другого пункта */
+.header__links-list-item:first-child {
+  list-style: none;
+}
+
+.header__link {
+  text-decoration: none;
+}
+
+/* 
+Логотип 
+ */
+
+.header__logo {
+  display: block;
+  width: 148px;
+}
+
+/* 
+Адрес в шапке
+ */
+
+.header__address {
+  justify-self: end;
+  max-width: 240px;
+  font-size: 18px;
+  line-height: 24.3px;
+  text-align: right;
+}
+
+.header__address a {
+  text-decoration: none;
+}
+/*
+   ОБЛОЖКА
+   */
+
+/* Поднимаем весь контент обложки над оверлеем.
+   У него z-index: 1, у тут 2 */
+.cover__title,
+.cover__description {
+  position: relative;
+  z-index: 2;
+}
+
+/* 
+Заголовок "Оно тебе надо"
+ */
+
+.cover__title {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 115%;
+  letter-spacing: 30px;
+  text-transform: uppercase;
+}
+
+/* Каждое слово - отдельный блок,
+   чтобы можно было выровнять его по своему краю */
+.aligned-text {
+  display: block;
+}
+
+.aligned-text_center {
+  text-align: center;
+}
+
+.aligned-text_right {
+  text-align: right;
+}
+
+/* убируем хвост справа, обнуляем мужбукв расстояние, чтобы выровнять по краю*/
+.no-letter-spacing {
+  letter-spacing: 0;
+}
+
+/*
+ Подзаголовок и кнопка 
+  */
+
+.cover__description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 107px;
+}
+
+.cover__description-text {
+  font-size: 22px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+/*
+Кнопка "Сделать ставку"
+*/
+
+.bet-button {
+  width: 256px;
+  height: 51px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+/*
+   ЛОТЫ 
+   */
+
+/* 
+Заголовок секции 
+*/
+
+.lots__heading {
+  margin-bottom: 30px;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* 
+Список карточек
+ */
+
+.lots__card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  list-style: none;
+}
+
+.lots__card-list-item {
+  width: 334px;
+  min-height: 596px;
+}
+
+/* 
+Ссылка-обёртка карточки
+ */
+
+.card-link {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* 
+Карточка 
+*/
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 48px 40px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* 
+фоновые картинки для каждой карточки 
+*/
+.card_type_film {
+  background-image: url('../images/card-lot-01.jpg');
+}
+
+.card_type_book {
+  background-image: url('../images/card-lot-02.jpg');
+}
+
+.card_type_picture {
+  background-image: url('../images/card-lot-03.jpg');
+}
+
+/* 
+Контент карточки 
+ */
+
+.card__title,
+.card__text {
+  position: relative;
+  z-index: 2;
+}
+
+.card__title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 120%;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.card__text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+/*
+Ссылка "посмотреть больше"
+ */
+
+.lots__look-more-link {
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 20px;
+  color: #000000;
+}
+
+/* 
+   ОБ АУКЦИОНЕ 
+   */
+
+.about {
+  display: grid;
+  grid-template-columns: 334px 1fr;
+  gap: 25px;
+  padding: 120px 24px 0;
+}
+
+/*
+круглый логотип
+ */
+
+.about__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 240px;
+  margin: 35px auto 0;
+  border-radius: 50%;
+  background-color: #000000;
+}
+
+.about__logo-image {
+  width: 148px;
+}
+
+/* 
+Правая колонка с текстом 
+ */
+
+.about__title {
+  margin-top: 133px;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about__text {
+  margin-top: 100px;
+}
+
+.about__text p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.about__text p:not(:last-child) {
+  margin-bottom: 24px;
+}
+/*
+   ФУТЕР
+    */
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: start;
+  padding: 180px 50px 50px;
+}
+
+/* 
+ Адрес в футере
+*/
+
+.footer__address {
+  font-size: 18px;
+  line-height: 24.3px;
+}
+
+/*
+ Меню в футере
+ */
+
+.footer__menu {
+  justify-self: center;
+}
+
+.footer__menu-list {
+  list-style: none;
+  font-size: 18px;
+  text-align: center;
+}
+
+.footer__menu-link {
+  text-decoration: underline;
+}
+
+/*
+ Активная ссылка без подчёркивания
+ */
+.footer__menu-link_active {
+  text-decoration: none;
+}
+
+/* 
+Соцсети
+*/
+
+.footer__social-list {
+  display: flex;
+  gap: 48px;
+  justify-self: end;
+  list-style: none;
+}
+
+.footer__social-link {
+  display: block;
+  width: 48px;
+  height: 48px;
+}
+
+.footer__social-icon {
+  width: 48px;
+  height: 48px;
+}
