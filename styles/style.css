@@ -23,7 +23,7 @@ body {
 
 .cover {
   position: relative;
-  padding: 165px 50px 50px;
+  padding: 165px 50px 89px;
   background-image: url('../images/cover.jpg');
   background-size: cover;
   background-position: center;
@@ -45,7 +45,7 @@ body {
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
   background-color: #ffffff;
-  padding: 95px 50px 100px;
+  padding: 85px 50px 90px;
 }
 
 /* 
@@ -90,12 +90,8 @@ body {
   max-width: 240px;
   font-size: 18px;
   line-height: 24.3px;
-  text-align: right;
 }
 
-.header__address a {
-  text-decoration: none;
-}
 /*
    ОБЛОЖКА
    */
@@ -155,7 +151,7 @@ body {
   font-size: 22px;
   line-height: 28px;
   text-transform: uppercase;
-  word-spacing: 20px;
+  word-spacing: 15px;
 }
 
 /*
