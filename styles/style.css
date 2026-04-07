@@ -21,13 +21,6 @@ body {
   font-style: normal;
 }
 
-
-
-.header {
-  padding: 95px 50px 100px;
-}
-
-
 .cover {
   position: relative;
   padding: 165px 50px;
@@ -52,6 +45,7 @@ body {
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
   background-color: #ffffff;
+  padding: 40px 50px;
 }
 
 /* 
